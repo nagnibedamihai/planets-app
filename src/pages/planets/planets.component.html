@@ -1,0 +1,66 @@
+<div class="container">
+    <h1>Planets</h1>
+
+    <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
+    <table mat-table [dataSource]="planets" class="mat-elevation-z8" width="100%">
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name</th>
+            <td mat-cell *matCellDef="let element">
+                 <a mat-button [routerLink]="'/planets/'+element.id" color="primary"> {{element.name}}</a>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rotation_period">
+            <th mat-header-cell *matHeaderCellDef class="text-right"> Rotation Period</th>
+            <td mat-cell *matCellDef="let element" class="text-right"> {{element.rotation_period}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="orbital_period">
+            <th mat-header-cell *matHeaderCellDef class="text-right"> Orbital Period</th>
+            <td mat-cell *matCellDef="let element" class="text-right"> {{element.orbital_period}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="diameter">
+            <th mat-header-cell *matHeaderCellDef class="text-right"> Diameter</th>
+            <td mat-cell *matCellDef="let element" class="text-right"> {{element.diameter}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="climate">
+            <th mat-header-cell *matHeaderCellDef class="text-left"> Climate</th>
+            <td mat-cell *matCellDef="let element" class="text-left"> {{element.climate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="gravity">
+            <th mat-header-cell *matHeaderCellDef> Gravity</th>
+            <td mat-cell *matCellDef="let element"> {{element.gravity}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="terrain">
+            <th mat-header-cell *matHeaderCellDef> Terrain</th>
+            <td mat-cell *matCellDef="let element"> {{element.terrain}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="surface_water">
+            <th mat-header-cell *matHeaderCellDef> Surface Water</th>
+            <td mat-cell *matCellDef="let element" class="text-right"> {{element.surface_water}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="population">
+            <th mat-header-cell *matHeaderCellDef class="text-right"> Population</th>
+            <td mat-cell *matCellDef="let element" class="text-right"> {{element.population}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+    </table>
+    <div></div>
+    <mat-paginator
+        [length]="count"
+        [pageSize]="10"
+        [pageSizeOptions]="[10]"
+        (page)="updatePage($event)"
+        class="mat-elevation-z8"
+    >
+    </mat-paginator>
+</div>

@@ -1,0 +1,18 @@
+<mat-toolbar class="mat-elevation-z4">
+    <mat-toolbar-row>
+        <h1 class="app-title">Planets App</h1>
+        <div class="app-menu">
+            <a mat-button [routerLink]="'/people'"> People </a>
+            <a mat-button [routerLink]="'/planets'"> Planets </a>
+            <a mat-button [routerLink]="'/films'"> Films </a>
+            <a mat-button [routerLink]="'/species'"> Species </a>
+            <a mat-button [routerLink]="'/vehicles'"> Vehicles </a>
+            <a mat-button [routerLink]="'/starships'"> Starships </a>
+            <a href="" class="github-link">
+                <img src="/assets/img/github-image.png">
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

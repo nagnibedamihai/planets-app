@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// header
+.mat-toolbar-row {
+    max-width: 1200px;
+    align-self: center;
+    .app-title {
+        margin-right: 32px;
+    }
+    .app-menu {
+        width: calc(100% - 110px);
+        text-align: right;
+    }
+    .github-link {
+        vertical-align: -5px;
+    }
+}
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.details-card {
+    margin-top: 32px;
+    .mat-card-header-text {
+        margin: 0;
+    }
+    .mat-icon {
+        margin-top: -2px;
+        cursor: pointer;
+    }
+    .details-card-content {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        padding: 16px 0;
+        box-sizing: border-box;
+    }
+    .details-card-item {
+        padding: 16px 0;
+    }
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 16px !important;
+}
+th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
+    padding-right: 16px !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
