@@ -1,7 +1,6 @@
 <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
 <div class="container">
-
-    <mat-card class="details-card" *ngIf="planet">
+    <mat-card class="details-card mat-elevation-z8" *ngIf="planet">
         <mat-card-header>
             <mat-card-title>
                 <mat-icon aria-hidden="false" class="pull-left" (click)="goBack()">arrow_back_ios</mat-icon>
@@ -15,51 +14,61 @@
                     <span>Rotation Period</span>
                     <span class="pull-right">{{ planet.rotation_period }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Orbital Period</span>
                     <span class="pull-right">{{ planet.orbital_period }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Diameter</span>
                     <span class="pull-right">{{ planet.diameter }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Climate</span>
                     <span class="pull-right">{{ planet.climate }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Gravity</span>
                     <span class="pull-right">{{ planet.gravity }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Terrain</span>
                     <span class="pull-right">{{ planet.terrain }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Surface Water</span>
                     <span class="pull-right">{{ planet.surface_water }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Residents</span>
                     <span class="pull-right">{{ planet.residents.length }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Films</span>
                     <span class="pull-right">{{ planet.films.length }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Created</span>
                     <span class="pull-right">{{ planet.created | date }}</span>
                 </div>
+
                 <mat-divider [inset]="true"></mat-divider>
                 <div class="details-card-item">
                     <span>Edited</span>
